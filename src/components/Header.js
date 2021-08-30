@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import {v4 as uuidv4} from 'uuid';
+import { Button } from '@material-ui/core';
 
 const Header = () => {
   const homeInfo = {
@@ -13,12 +14,12 @@ const Header = () => {
   return (
     <Fragment>
       <header>
-        <h1 className="titulo">
+        <Button>
           Robin Angel Romero <span>Freelancer</span>
-        </h1>
+        </Button>
       </header>
-      <div className="nav-bg">
-        <nav className="navegacion-principal">
+      <div >
+        <nav >
           {opciones.map((opcion) => (
             <a key={uuidv4()}>{`${opcion}`}</a>
           ))}
