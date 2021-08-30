@@ -1,13 +1,254 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --primario: #ffc107;
+  --secundario: #0097a7;
+  --gris: #757575;
+  --grisClaro: #DFE9f3;
+  
+  --fuente-principal: 3.8rem;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; /*Hack para Box model*/
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  font-size: 16px; /*1rem = 10px*/
+  font-family: "Inter";
+  font-weight: normal;
+  background-image: linear-gradient(to top,var(--grisClaro) 0%, var(--blanco) 100%
+  );
+}
+
+.boton {
+  background-color: var(--secundario);
+  color: var(--blanco);
+  padding: 1rem 3rem;
+  margin-top: 2.5rem;
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.boton:hover {
+  background-color: var(--gris);
+  cursor: pointer;
+}
+
+
+.sombra {
+  padding: 5rem;
+  -webkit-box-shadow: 0px -6px 48px -1px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 0px -6px 48px -1px rgba(0, 0, 0, 0.54);
+  box-shadow: 0px -6px 48px -1px rgba(0, 0, 0, 0.54);
+  background-color: var(--blanco);
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor {
+    margin: 2rem 15rem;
+  }
+}
+
+/* Tipografia */
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .boton {
+    width: 75%;
+    text-align: center;
+  }
+}
+
+/* titulos */
+
+.titulo span {
+  font-size: 2rem;
+}
+
+/* Navegacion Principal */
+
+.navegacion-principal {
+  display: flex; /* este display flex tambien permite que este elemento cresca en caso de que los elementos hijos crescan, por ejemeplo si se le daa }
+  un padding o margin mas grande a los enlaces que tiene adentro, el elemento que los contiene crecera en caso de que 
+  los elementos hijos aumenten a su tamañño a uno mayor que el de su elemento padre */
+
+  justify-content: space-evenly;
+  background-color: var(--secundario);
+}
+
+@media (max-width: 768px) {
+  .navegacion-principal {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.navegacion-principal a {
+  padding: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: var(--blanco);
+  transition: 0.5s;
+}
+
+.navegacion-principal a:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
+  transition: 0.5s;
+}
+
+/* Hero */
+
+.hero {
+  background-image: url(./imagenes/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /* esta propiedad permite que la imagen se ajuste al tamño del elemento que la contiene */
+  height: 45rem;
+  /* padding: 20px; */
+  position: relative; /* en este caso queremos posicionar la clase 'contenido-hero'
+  para esto debemos tener en cuento que el elmento padre sipre debe tener posicion 'relativa' 
+  y de esta manera, poder posicionar el elemnto hijo de forma 'absoluta'*/
+}
+
+.contenido-hero {
+  position: absolute;
+  background-color: rgb(0 0 0 / 70%);
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--blanco);
+  font-size: 2rem;
+}
+
+
+/* servicios */
+
+.servicios, .navegacion-principal, .formulario{
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+@media (min-width: 769px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
+    /* grid-template-rows: 30rem 80rem; */
+    /* justify-content: space-between; */
+  }
+}
+
+.servicio h3 {
+  color: var(--secundario);
+  font-weight: normal;
+}
+
+.servicio p {
+  line-height: 2;
+}
+
+.servicio .iconos {
+  height: 15rem;
+  width: 15rem;
+  margin: 0 auto;
+  /* border-radius: initial; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--primario);
+  transition: 0.5s;
+
+}
+
+.servicio .iconos:hover {
+  height: 20rem;
+  width: 20rem;
+  background-color: var(--secundario);
+
+  transition: 0.5s;
+}
+
+
+/* contacto */
+
+
+.contacto-form {
+  display: inline;
+}
+
+.formulario {
+  background-color: var(--gris);
+  width: min(60rem, 100%);
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+  border: none;
+}
+
+.formulario legend {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: var(--primario);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+
+.contenedor-campos {
+
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  color: var(--blanco);
+  margin-bottom:.5rem;
+  font-weight: bold;
+  display: block;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 1rem;
 }
