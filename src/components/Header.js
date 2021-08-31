@@ -22,8 +22,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   tab: {
+    transition: '0.5s',
     "&:hover": {
-      backgroundColor: 'rgb(7, 177, 77, 0.42)'
+      backgroundColor: 'rgb(7, 177, 77, 0.42)',
+      transition: '0.5s'
     }
   }
   
