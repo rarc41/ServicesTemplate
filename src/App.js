@@ -1,6 +1,9 @@
 import Header from "./components/Header";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
 
+// direccion a color tool
+// https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=69F0AE&secondary.color=FFB74D&primary.text.color=FB8C00&secondary.text.color=000000
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -22,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Header theme={theme}></Header>
+        <Header></Header>
       </ThemeProvider>
     </div>
   );

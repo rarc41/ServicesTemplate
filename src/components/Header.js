@@ -1,12 +1,8 @@
 import React, { Fragment, useState } from "react";
 // import { v4 as uuidv4 } from "uuid";
-import {
-  Typography,
-  Grid,
-  Tab,
-  Tabs,
-} from "@material-ui/core";
+import { Typography, Grid, Tab, Tabs } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import transitions from "@material-ui/core/styles/transitions";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,20 +12,21 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "capitalize",
   },
   navegacion: {
-    display: "flex",
-    marginTop: "2rem",
-    justifyContent: "space-evenly",
-    backgroundColor: "#3C5FC7",
+    backgroundColor: theme.palette.primary.main,
+    margin: "2rem 0",
   },
 
-  pestañas: {
-    color: "white",
-    fontWeight: "bold",
-    opacity: 1,
+  display: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
   },
-  nav_bar: {
-    backgroundColor: theme.palette.primary.main,
-  },
+
+  tab: {
+    "&:hover": {
+      backgroundColor: 'rgb(7, 177, 77, 0.42)'
+    }
+  }
+  
 }));
 
 const Header = () => {
@@ -62,22 +59,19 @@ const Header = () => {
           <Typography>{homeInfo.profession}</Typography>
         </Grid>
       </header>
-      <div
-      // className={classes.navegacion}
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        className={classes.navegacion}
+        classes={{flexContainer: classes.display}}
+        // style={flexContainer}
+        indicatorColor="secondary"
+        textColor="secondary"
       >
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          className={classes.nav_bar}
-          variant="fullWidth"
-          indicatorColor="secondary"
-          textColor="secondary"
-        >
-          {opciones.map((opcion) => (
-            <Tab key={opciones.indexOf(opcion)} label={opcion}></Tab>
-          ))}
-        </Tabs>
-      </div>
+        {opciones.map((opcion) => (
+          <Tab className={classes.tab} key={opciones.indexOf(opcion)} label={opcion}></Tab>
+        ))}
+      </Tabs>
     </Fragment>
   );
 };
