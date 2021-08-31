@@ -20,7 +20,7 @@ const Header = () => {
       <div className="nav-bg">
         <nav className="navegacion-principal">
           {opciones.map((opcion) => (
-            <a key={uuidv4()}>{`${opcion}`}</a>
+            <a key={uuidv4()} href='#'>{`${opcion}`}</a>
           ))}
         </nav>
       </div>

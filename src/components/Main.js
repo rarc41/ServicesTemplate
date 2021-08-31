@@ -1,5 +1,6 @@
 import React from "react";
 import Servicios from "./Servicios"
+import Formulario from "./Formulario"
 
 const Main = () => {
   return (
@@ -7,7 +8,7 @@ const Main = () => {
       <h2>Mis Servicios</h2>
       <div>
           <Servicios></Servicios>
-          {/* <Formulario/> */}
+          <Formulario/>
       </div>
     </main>
   );

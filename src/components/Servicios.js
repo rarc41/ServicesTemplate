@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import { loremIpsum, LoremIpsum } from "react-lorem-ipsum";
+import { LoremIpsum } from "react-lorem-ipsum";
 import Iconos from "./Iconos";
 
 const Servicios = () => {
@@ -13,10 +13,10 @@ const Servicios = () => {
     <Fragment>
       <div className="servicios">
       {servicios.map((servicio) => (
-            <section className="servicio">
+            <section key={servicio.id} className="servicio">
                 <h3>{servicio.nombre}</h3>
                 <Iconos servicioId={servicio.id}></Iconos>
-                <p><LoremIpsum p={1}></LoremIpsum></p>
+                <LoremIpsum p={1}></LoremIpsum>
             </section>
           ))}
       </div>
