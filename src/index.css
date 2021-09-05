@@ -252,3 +252,15 @@ h3 {
   padding: 1.5rem;
   border-radius: 1rem;
 }
+
+.makeStyles-curvaSombra-61 {
+  top: 233px;
+  left: 35rem;
+  width: 35rem;
+  height: 25rem;
+  z-index: 1;
+  position: absolute;
+  box-shadow: -104px -26px 90px 21px rgb(0 0 0 / 75%);
+  border-radius: 100% 0% 0% 58% / 100% 10% 10% 0%;
+  background-image: radial-gradient(at top,#545755, #000000);
+}

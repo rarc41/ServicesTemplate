@@ -13,21 +13,22 @@ const useStyles = makeStyles((theme) => ({
   },
   navegacion: {
     backgroundColor: theme.palette.primary.main,
-    margin: "2rem 0",
+    // marginTop: "2rem",
   },
 
   display: {
     display: 'flex',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
   },
 
   tab: {
     transition: '0.5s',
+    color: 'white',
     "&:hover": {
       backgroundColor: 'rgb(7, 177, 77, 0.42)',
       transition: '0.5s'
     }
-  }
+  },
   
 }));
 
@@ -49,7 +50,7 @@ const Header = () => {
 
   return (
     <Fragment>
-      <header>
+      {/* <header>
         <Grid
           container
           direction="column"
@@ -60,7 +61,7 @@ const Header = () => {
 
           <Typography>{homeInfo.profession}</Typography>
         </Grid>
-      </header>
+      </header> */}
       <Tabs
         value={value}
         onChange={handleChange}
@@ -71,7 +72,7 @@ const Header = () => {
         textColor="secondary"
       >
         {opciones.map((opcion) => (
-          <Tab className={classes.tab} key={opciones.indexOf(opcion)} label={opcion}></Tab>
+          <Tab className={classes.tab} classes={{textColorSecondary: classes.tab}} key={opciones.indexOf(opcion)} label={opcion}></Tab>
         ))}
       </Tabs>
     </Fragment>
