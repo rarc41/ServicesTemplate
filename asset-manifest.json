@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/ServicesTemplate/static/js/main.3a445c4d.chunk.js",
-    "main.js.map": "/ServicesTemplate/static/js/main.3a445c4d.chunk.js.map",
-    "runtime-main.js": "/ServicesTemplate/static/js/runtime-main.30bf7e27.js",
-    "runtime-main.js.map": "/ServicesTemplate/static/js/runtime-main.30bf7e27.js.map",
-    "static/js/2.375da650.chunk.js": "/ServicesTemplate/static/js/2.375da650.chunk.js",
-    "static/js/2.375da650.chunk.js.map": "/ServicesTemplate/static/js/2.375da650.chunk.js.map",
-    "index.html": "/ServicesTemplate/index.html",
-    "static/js/2.375da650.chunk.js.LICENSE.txt": "/ServicesTemplate/static/js/2.375da650.chunk.js.LICENSE.txt",
-    "static/media/Hero.22d197fb.png": "/ServicesTemplate/static/media/Hero.22d197fb.png"
+    "main.js": "/ServicesTemplate/tree/gh-pages/static/js/main.3a445c4d.chunk.js",
+    "main.js.map": "/ServicesTemplate/tree/gh-pages/static/js/main.3a445c4d.chunk.js.map",
+    "runtime-main.js": "/ServicesTemplate/tree/gh-pages/static/js/runtime-main.0d044962.js",
+    "runtime-main.js.map": "/ServicesTemplate/tree/gh-pages/static/js/runtime-main.0d044962.js.map",
+    "static/js/2.375da650.chunk.js": "/ServicesTemplate/tree/gh-pages/static/js/2.375da650.chunk.js",
+    "static/js/2.375da650.chunk.js.map": "/ServicesTemplate/tree/gh-pages/static/js/2.375da650.chunk.js.map",
+    "index.html": "/ServicesTemplate/tree/gh-pages/index.html",
+    "static/js/2.375da650.chunk.js.LICENSE.txt": "/ServicesTemplate/tree/gh-pages/static/js/2.375da650.chunk.js.LICENSE.txt",
+    "static/media/Hero.22d197fb.png": "/ServicesTemplate/tree/gh-pages/static/media/Hero.22d197fb.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.30bf7e27.js",
+    "static/js/runtime-main.0d044962.js",
     "static/js/2.375da650.chunk.js",
     "static/js/main.3a445c4d.chunk.js"
   ]
