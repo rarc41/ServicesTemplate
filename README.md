@@ -72,7 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Hola, soy Robin👋
 
-![Robin Romero](https://ibb.co/nB3sfMr)
+![Robin Romero](https://user-images.githubusercontent.com/69741658/133867984-c4837588-0dfd-4c14-a19d-741e037075e6.png)
 
 
 <!--
